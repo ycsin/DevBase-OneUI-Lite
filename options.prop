@@ -1,0 +1,237 @@
+#
+# DevBase by ALEXNDR (_alexndr @ XDA)
+#
+# Configuration file to allow customize the installation.
+#
+# File inside the ZIP installer is just for reference - please DO NOT modify it!
+# If you want to change some options listed below - edit the copy of this file, then place
+# modified options.prop file in the root directory of internal emulated scdard (/data/media/0)
+# or in the root directory of extSdCard (recommended if you plan to format internal emulated
+# sdcard) and then start the installation.
+#
+# TIP: You do not need to repeat this step every next update I will release. As long as your
+# customized options.prop file is present in the (ext)SdCard - future DevBase installers will
+# "read in your mind" that you want to install with such options again.
+#
+# NOTE: All below variables and values are case sensitive!
+
+# Enable root access. Allowed values:
+# true - install Magisk as root solution (default)
+# false - do not root device
+
+root=true
+
+# Install Xposed framework matched to the ROM (there is also a possibility to detect Xposed profile
+# automatically, but auto-detection will not work if user will perform wipe /system). Allowed values:
+# auto - detect Xposed profile automatically
+# true - force Xposed framework installation
+# false - do not install Xposed framework
+
+xposed=false
+
+# CSC Selection. Allowed values:
+# KCSC - Keep current CSC, recommended in most cases (automatic selection or keep current CSC contents).
+# You can force the use of natively supported CSC by typing (use UPPERCASE!): ACR, AFG, AFR, ARO, ATO, AUT,
+# BGL, BNG, BRI, BTC, BTU, CAC, CAM, CEL, CHO, COO, CPW, DBT, DKR, ECT, EGY, EON, ETL, EUR, GLB, ILO, INS,
+# ITV, KSA, LAO, LUX, LYS, MAT, MID, MM1, MWD, MYM, NEE, NPL, ORX, PAK, PCL, PHE, PHN, PTR, ROM, SEB, SEE,
+# SEK, SER, SIN, SKZ, SLK, SMA, SMP, STH, TEB, THL, THR, TMC, TPA, TPH, TTT, TUN, TUR, WTL, XEF, XEH, XEO,
+# XEU, XFA, XFE, XME, XSG, XSP, XTC, XXV, ZTO
+
+CSC=KCSC
+
+# Custom CSC Features. Allowed value in each line: <Example_line>value</Example_line>
+
+<CscFeature_Common_SupportWcdmaInSlave>true</CscFeature_Common_SupportWcdmaInSlave>
+<CscFeature_VoiceCall_ConfigRecording>RecordingAllowed</CscFeature_VoiceCall_ConfigRecording>
+<CscFeature_Setting_EnableMenuBlockCallMsg>true</CscFeature_Setting_EnableMenuBlockCallMsg>
+<CscFeature_Setting_CustNetworkSelMenu4>LTEONLY</CscFeature_Setting_CustNetworkSelMenu4>
+<CscFeature_Setting_SupportRealTimeNetworkSpeed>true</CscFeature_Setting_SupportRealTimeNetworkSpeed>
+<CscFeature_SmartManager_ConfigSubFeatures>roguepopup|autoclean|autorestart|trafficmanager</CscFeature_SmartManager_ConfigSubFeatures>
+<CscFeature_SmartManager_DisableAntiMalware>true</CscFeature_SmartManager_DisableAntiMalware>
+<CscFeature_SystemUI_SupportRecentAppProtection>true</CscFeature_SystemUI_SupportRecentAppProtection>
+<CscFeature_Message_DisplaySmsTimeAs>server</CscFeature_Message_DisplaySmsTimeAs>
+<CscFeature_Message_DisplayMmsTimeAs>server</CscFeature_Message_DisplayMmsTimeAs>
+<CscFeature_Camera_ShutterSoundMenu>true</CscFeature_Camera_ShutterSoundMenu>
+<CscFeature_RIL_ForceConnectMMS>true</CscFeature_RIL_ForceConnectMMS>
+<CscFeature_Knox_SupportKnoxGuard>false</CscFeature_Knox_SupportKnoxGuard>
+<CscFeature_SystemUI_SupportDataUsageViewOnQuickPanel>true</CscFeature_SystemUI_SupportDataUsageViewOnQuickPanel>
+
+# Custom physical debloat list. Allowed value in each line: path to app's directory in /system.
+# (NOTE: wildcards are allowed here)
+
+# Samsung
+## Knox / Pay / Pass / Billing / Secure Folder / Dex / Enterprise
+/system/app/AASAservice # Probably related to permissions/security
+/system/app/BBCAgent # Knox-related*
+/system/app/EdmSimPinService
+/system/app/ESEServiceAgent
+/system/app/KnoxAttestationAgent
+/system/app/MDMApp # Mobile Device Management
+/system/app/mldapchecker # MLDAPlog (Mobile Lightweight Directory Access Protocol?)
+/system/app/SecurityLogAgent # Root detection related, Knox-related
+/system/app/SecurityProviderSEC # Secure folder related
+/system/app/UniversalMDMClient # Mobile Device Management?
+/system/priv-app/AuthFramework
+/system/priv-app/ContainerAgent* # Knox Workspace
+/system/priv-app/DexCommunity
+/system/priv-app/DesktopModeUiService
+/system/priv-app/IpsGeofence
+/system/priv-app/KeyguardWallpaperUpdator
+/system/priv-app/KnoxCore
+/system/priv-app/KnoxContainerDesktop
+/system/priv-app/KnoxDesktopLauncher
+/system/priv-app/knoxvpnproxyhandler
+/system/priv-app/knoxanalyticsagent
+/system/priv-app/KLMSAgent #Samsung's device-for-corporate-use solution
+/system/priv-app/SamsungBilling
+/system/priv-app/SamsungPass*
+/system/priv-app/SamsungPay*
+/system/priv-app/SecureFolder*
+/system/priv-app/SKMSAgent #eSE-based NFC support
+/system/priv-app/SystemUIDesktop
+/system/priv-app/ManagedProvisioning #Work profile setup
+/system/priv-app/PaymentFramework
+/system/priv-app/Rlc #OEM unlock issue
+
+## Account
+/system/priv-app/SamsungAccount*
+/data/app/com.samsung.android.mobileservice*
+/system/priv-app/SamsungExperienceService
+
+## Bixby
+/system/priv-app/BixbyWakeup
+/system/priv-app/BixbyHome
+/system/priv-app/BixbyService
+/system/priv-app/Bixby
+/system/priv-app/BixbyAgentStub
+/system/priv-app/SystemUIBixby*
+
+## Theme
+/system/priv-app/ThemeCenter
+/system/priv-app/ThemeStore
+
+## Edge
+/system/priv-app/AppsEdgePanel*
+/system/priv-app/CocktailBarService*
+/system/priv-app/PeopleStripe
+/system/priv-app/TaskEdgePanel*
+/system/app/ClipboardEdge
+/system/app/CnnPanel
+/system/app/CocktailQuickTool
+/system/app/Yahoo*
+/system/app/FlipboardBriefing
+/data/app/flipboard*
+/system/app/SBrowserEdge
+
+# Smart things
+/system/priv-app/EasySetup
+/system/app/SamsungConnect*
+/system/priv-app/BeaconManager # Nearby device scanning
+
+## Font
+/system/app/ChocoEUKor
+/system/app/CoolEUKor
+/system/app/Foundation
+/system/app/RoseEUKor
+
+## Game
+/system/priv-app/GameHome
+/system/priv-app/GameTools*
+/system/app/GameOptimizer
+/system/app/GameOptimizingService
+
+## Features / Samsung Apps & Widget
+/system/app/DAAgent	# Dual app agent
+/system/app/KidsHome*
+/system/app/LinkSharing*
+/system/app/SmartReminder
+/system/app/AllshareMediaShare
+/system/app/SamsungCalendar
+/system/app/Weather_SE*
+/system/priv-app/StoryService
+/system/priv-app/SamsungMagnifier3
+/system/app/StoryEditor*
+/system/priv-app/GalaxyApps*
+/system/priv-app/RubinVersion* # Customization service
+/system/app/SamsungIME*
+/system/app/EasymodeContactsWidget*
+/system/priv-app/SamsungCloudClient
+/system/priv-app/GalaxyAppsWidget*
+/system/priv-app/AppLock
+/system/priv-app/Fmm # Find my mobile
+/system/priv-app/Gear360Editor*
+/system/priv-app/GearVRService
+/system/priv-app/LedCover*
+/system/priv-app/MateAgent
+/system/priv-app/SmartManager_v*_DeviceSecurity
+/system/app/SCPMClient* # Related to Smart Manager
+/system/priv-app/SamsungSocial #reddit.com/r/GalaxyNote8/comments/bdcw1o/what_the_heck_is_samsung_social/
+/system/priv-app/Upday # play.google.com/store/apps/details?id=de.axelspringer.yana
+/system/app/PhotoTable # Photo screen saver
+/system/app/BasicDreams # Screen Saver
+
+## Software Update
+/system/priv-app/FotaAgent
+/system/priv-app/SOAgent
+
+## Positioning
+/system/priv-app/SamsungPositioning
+/system/priv-app/NSFusedLocation*
+/system/app/SLocation
+
+# Accessibility
+/system/priv-app/Accessibility
+/system/priv-app/AssistantMenu* #Floating button
+/system/app/SamsungTTS
+/system/app/UniversalSwitch
+/system/app/STalkback
+
+# Facebook
+/system/priv-app/FBInstaller*
+/system/priv-app/FBServices
+/system/app/Facebook*
+/system/app/FBAppManager_NS
+
+# Microsoft
+/system/app/MSSkype_stub*
+/system/priv-app/Excel_SamsungStub
+/system/priv-app/LinkedIn_SamsungStub
+/system/priv-app/OneDrive_Samsung*
+/system/priv-app/PowerPoint_SamsungStub
+/system/priv-app/Word_SamsungStub
+
+
+# SIM / RIL / VOIP
+/system/app/SimMobilityKit
+/system/app/vsimservice
+/system/app/BCService # RIL related
+
+# Compatibility Test Suite
+/system/app/CtsShim*
+/system/priv-app/CtsShim*
+
+# Unknowns
+/system/priv-app/SPPPushClient
+/system/priv-app/SVoicePLM
+/system/app/AdvSoundDetector*
+/system/app/DictDiotekForSec
+/system/app/HandwritingService
+/system/app/SilentLog
+/system/app/BookmarkProvider
+/system/priv-app/GoogleDaydreamCustomization
+/system/app/CompanionDeviceManager
+/system/priv-app/MediaLearningPlatform
+/system/priv-app/SVCAgent
+/system/app/AppLinker
+/system/app/ChromeCustomizations
+/system/app/RootPA
+/system/priv-app/OMCAgent*
+/system/priv-app/ContextProvider
+/system/priv-app/DiagMonAgent
+/system/priv-app/IPService
+/system/app/PlayAutoInstallConfig
+
+# Custom virtual debloat list. Allowed value in each line: exact app name with .apk extension.
+# (NOTE: without app's path/directory, wildcards are NOT allowed here!)
+
+
