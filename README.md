@@ -1,5 +1,5 @@
 # DevBase OneUI Lite
- Samsung Galaxy S8 DevBase debloated with extra features added.
+ Samsung Galaxy S8 DevBase debloated with extra features added. Setup instructions can be found in the [DevBase XDA thread](https://forum.xda-developers.com/galaxy-s8/samsung-galaxy-s8--s8-cross-device-development/test-u1ara2-devbase-v5-0-encryption-t3752964).
 
 Removed:
 - Samsung knox
