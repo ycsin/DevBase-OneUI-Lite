@@ -126,13 +126,13 @@ CSC=KCSC
 
 # Smart things
 /system/priv-app/EasySetup
-/system/app/SamsungConnect*
+/system/app/SamsungConnect* # Buds popup will not work if removed
 /system/priv-app/BeaconManager # Nearby device scanning
 
 ## Font
 /system/app/ChocoEUKor
 /system/app/CoolEUKor
-/system/app/Foundation
+/system/app/Foundation # Font can't be changed if removed
 /system/app/RoseEUKor
 
 ## Game
@@ -214,8 +214,8 @@ CSC=KCSC
 # Unknowns
 /system/priv-app/SPPPushClient
 /system/priv-app/SVoicePLM
-/system/app/AdvSoundDetector*
-/system/app/DictDiotekForSec
+/system/app/AdvSoundDetector* # Door bell, baby crying detection
+/system/app/DictDiotekForSec # Dictionary in text highlight
 /system/app/HandwritingService
 /system/app/SilentLog
 /system/app/BookmarkProvider
