@@ -92,6 +92,7 @@ CSC=KCSC
 /system/priv-app/ManagedProvisioning #Work profile setup
 /system/priv-app/PaymentFramework
 /system/priv-app/Rlc #OEM unlock issue
+/system/container/SharedDeviceKeyguard
 
 ## Account
 /system/priv-app/SamsungAccount*
