@@ -135,7 +135,7 @@ CSC=KCSC
 /system/app/Foundation # Font can't be changed if removed
 /system/app/RoseEUKor
 
-## Game
+## Game launcher and optimization service
 /system/priv-app/GameHome
 /system/priv-app/GameTools*
 /system/app/GameOptimizer
