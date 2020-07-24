@@ -110,6 +110,9 @@ CSC=KCSC
 ## Theme
 /system/priv-app/ThemeCenter
 /system/priv-app/ThemeStore
+# Cutout
+/vendor/overlay/DisplayCutoutEmulationDouble
+/vendor/overlay/DisplayCutoutEmulationTall
 
 ## Edge
 /system/priv-app/AppsEdgePanel*
