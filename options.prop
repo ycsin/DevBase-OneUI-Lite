@@ -59,8 +59,7 @@ CSC=KCSC
 # Custom physical debloat list. Allowed value in each line: path to app's directory in /system.
 # (NOTE: wildcards are allowed here)
 
-# Samsung
-## Knox / Pay / Pass / Billing / Secure Folder / Dex / Enterprise
+# Samsung Knox / Pay / Pass / Billing / Secure Folder / Dex / Enterprise
 /system/app/AASAservice # Probably related to permissions/security
 /system/app/BBCAgent # Knox-related*
 /system/app/EdmSimPinService
@@ -95,13 +94,20 @@ CSC=KCSC
 /system/priv-app/Rlc #OEM unlock issue
 /system/container/SharedDeviceKeyguard
 
-## Account
+# Accessibility
+/system/priv-app/Accessibility
+/system/priv-app/AssistantMenu* #Floating button
 /system/app/UIBCVirtualSoftkey
+/system/app/SamsungTTS
+/system/app/UniversalSwitch
+/system/app/STalkback
+
+# Account
 /system/priv-app/SamsungAccount*
 /data/app/com.samsung.android.mobileservice*
 /system/priv-app/SamsungExperienceService
 
-## Bixby
+# Bixby
 /system/priv-app/BixbyWakeup
 /system/priv-app/BixbyHome
 /system/priv-app/BixbyService
@@ -109,14 +115,15 @@ CSC=KCSC
 /system/priv-app/BixbyAgentStub
 /system/priv-app/SystemUIBixby*
 
-## Theme
-/system/priv-app/ThemeCenter
-/system/priv-app/ThemeStore
+# Compatibility Test Suite
+/system/app/CtsShim*
+/system/priv-app/CtsShim*
+
 # Cutout
 /vendor/overlay/DisplayCutoutEmulationDouble
 /vendor/overlay/DisplayCutoutEmulationTall
 
-## Edge
+# Edge
 /system/priv-app/AppsEdgePanel*
 /system/priv-app/CocktailBarService*
 /system/priv-app/PeopleStripe
@@ -129,29 +136,62 @@ CSC=KCSC
 /data/app/flipboard*
 /system/app/SBrowserEdge
 
-# Smart things
-/system/priv-app/EasySetup
-/system/app/SamsungConnect* # Buds popup will not work if removed
-/system/priv-app/BeaconManager # Nearby device scanning
+# Facebook
+/system/priv-app/FBInstaller*
+/system/priv-app/FBServices
+/system/app/Facebook*
+/system/app/FBAppManager_NS
 
-## Font
+# Font
 /system/app/ChocoEUKor
 /system/app/CoolEUKor
 /system/app/Foundation # Font can't be changed if removed
 /system/app/RoseEUKor
 
-## Game launcher and optimization service
+# Game launcher and optimization service
 /system/priv-app/GameHome
 /system/priv-app/GameTools*
 /system/app/GameOptimizer
 /system/app/GameOptimizingService
 
-## Samsung Cloud
+# Microsoft
+/system/app/MSSkype_stub*
+/system/priv-app/Excel_SamsungStub
+/system/priv-app/LinkedIn_SamsungStub
+/system/priv-app/OneDrive_Samsung*
+/system/priv-app/PowerPoint_SamsungStub
+/system/priv-app/Word_SamsungStub
+
+# Positioning
+/system/priv-app/SamsungPositioning
+/system/priv-app/NSFusedLocation*
+/system/app/SLocation
+
+# Smart things
+/system/priv-app/EasySetup
+/system/app/SamsungConnect* # Buds popup will not work if removed
+/system/priv-app/BeaconManager # Nearby device scanning
+
+# Samsung Cloud
 /system/priv-app/SamsungCloudClient
 /system/app/BrightnessBackupService
 /system/priv-app/ringtoneBR
 /system/app/ShortcutBackupService
-## Features / Samsung Apps & Widget
+
+# Software Update
+/system/priv-app/FotaAgent
+/system/priv-app/SOAgent
+
+# SIM / RIL / VOIP
+/system/app/SimMobilityKit
+/system/app/vsimservice
+/system/app/BCService # RIL related
+
+# Theme
+/system/priv-app/ThemeCenter
+/system/priv-app/ThemeStore
+
+# Features / Samsung Apps & Widget
 /system/app/DAAgent	# Dual app agent
 /system/app/KidsHome*
 /system/app/LinkSharing*
@@ -163,10 +203,10 @@ CSC=KCSC
 /system/priv-app/SamsungMagnifier3
 /system/app/StoryEditor*
 /system/priv-app/GalaxyApps*
+/system/priv-app/GalaxyAppsWidget*
 /system/priv-app/RubinVersion* # Customization service
 /system/app/SamsungIME*
 /system/app/EasymodeContactsWidget*
-/system/priv-app/GalaxyAppsWidget*
 /system/priv-app/AppLock
 /system/priv-app/Fmm # Find my mobile
 /system/priv-app/Gear360Editor*
@@ -182,47 +222,7 @@ CSC=KCSC
 /system/app/WebManual
 /system/app/DictDiotekForSec # Dictionary in text highlight
 
-## Software Update
-/system/priv-app/FotaAgent
-/system/priv-app/SOAgent
-
-## Positioning
-/system/priv-app/SamsungPositioning
-/system/priv-app/NSFusedLocation*
-/system/app/SLocation
-
-# Accessibility
-/system/priv-app/Accessibility
-/system/priv-app/AssistantMenu* #Floating button
-/system/app/SamsungTTS
-/system/app/UniversalSwitch
-/system/app/STalkback
-
-# Facebook
-/system/priv-app/FBInstaller*
-/system/priv-app/FBServices
-/system/app/Facebook*
-/system/app/FBAppManager_NS
-
-# Microsoft
-/system/app/MSSkype_stub*
-/system/priv-app/Excel_SamsungStub
-/system/priv-app/LinkedIn_SamsungStub
-/system/priv-app/OneDrive_Samsung*
-/system/priv-app/PowerPoint_SamsungStub
-/system/priv-app/Word_SamsungStub
-
-
-# SIM / RIL / VOIP
-/system/app/SimMobilityKit
-/system/app/vsimservice
-/system/app/BCService # RIL related
-
-# Compatibility Test Suite
-/system/app/CtsShim*
-/system/priv-app/CtsShim*
-
-## Unknowns
+# Unknowns
 /system/priv-app/SPPPushClient
 /system/priv-app/SVoicePLM
 /system/app/AdvSoundDetector* # Door bell, baby crying detection
