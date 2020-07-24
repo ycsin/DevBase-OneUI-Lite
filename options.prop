@@ -141,6 +141,11 @@ CSC=KCSC
 /system/app/GameOptimizer
 /system/app/GameOptimizingService
 
+## Samsung Cloud
+/system/priv-app/SamsungCloudClient
+/system/app/BrightnessBackupService
+/system/priv-app/ringtoneBR
+/system/app/ShortcutBackupService
 ## Features / Samsung Apps & Widget
 /system/app/DAAgent	# Dual app agent
 /system/app/KidsHome*
@@ -156,7 +161,6 @@ CSC=KCSC
 /system/priv-app/RubinVersion* # Customization service
 /system/app/SamsungIME*
 /system/app/EasymodeContactsWidget*
-/system/priv-app/SamsungCloudClient
 /system/priv-app/GalaxyAppsWidget*
 /system/priv-app/AppLock
 /system/priv-app/Fmm # Find my mobile
