@@ -241,6 +241,7 @@ CSC=KCSC
 /system/priv-app/DiagMonAgent
 /system/priv-app/IPService
 /system/app/PlayAutoInstallConfig
+/system/priv-app/PreloadInstaller
 
 # Custom virtual debloat list. Allowed value in each line: exact app name with .apk extension.
 # (NOTE: without app's path/directory, wildcards are NOT allowed here!)
