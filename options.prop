@@ -179,6 +179,7 @@ CSC=KCSC
 /system/priv-app/Upday # play.google.com/store/apps/details?id=de.axelspringer.yana
 /system/app/PhotoTable # Photo screen saver
 /system/app/BasicDreams # Screen Saver
+/system/app/WebManual
 
 ## Software Update
 /system/priv-app/FotaAgent
