@@ -180,6 +180,7 @@ CSC=KCSC
 /system/app/PhotoTable # Photo screen saver
 /system/app/BasicDreams # Screen Saver
 /system/app/WebManual
+/system/app/DictDiotekForSec # Dictionary in text highlight
 
 ## Software Update
 /system/priv-app/FotaAgent
@@ -225,7 +226,6 @@ CSC=KCSC
 /system/priv-app/SPPPushClient
 /system/priv-app/SVoicePLM
 /system/app/AdvSoundDetector* # Door bell, baby crying detection
-/system/app/DictDiotekForSec # Dictionary in text highlight
 /system/app/HandwritingService
 /system/app/SilentLog
 /system/app/BookmarkProvider
