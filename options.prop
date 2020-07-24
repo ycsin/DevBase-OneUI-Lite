@@ -96,6 +96,7 @@ CSC=KCSC
 /system/container/SharedDeviceKeyguard
 
 ## Account
+/system/app/UIBCVirtualSoftkey
 /system/priv-app/SamsungAccount*
 /data/app/com.samsung.android.mobileservice*
 /system/priv-app/SamsungExperienceService
