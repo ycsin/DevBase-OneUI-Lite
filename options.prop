@@ -222,6 +222,7 @@ CSC=KCSC
 /system/app/BasicDreams # Screen Saver
 /system/app/WebManual
 /system/app/DictDiotekForSec # Dictionary in text highlight
+/system/app/MdecService # Call and text on other device
 
 # Unknowns
 /system/priv-app/SPPPushClient
