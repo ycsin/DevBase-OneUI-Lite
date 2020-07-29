@@ -85,6 +85,7 @@ CSC=KCSC
 /system/priv-app/KLMSAgent #Samsung's device-for-corporate-use solution
 /system/priv-app/SamsungBilling
 /system/priv-app/SamsungPass*
+/system/app/SamsungPass*
 /system/priv-app/SamsungPay*
 /system/priv-app/SecureFolder*
 /system/priv-app/SKMSAgent #eSE-based NFC support
